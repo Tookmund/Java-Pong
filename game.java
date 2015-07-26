@@ -84,6 +84,7 @@ public class game
          updateBall();
          movePaddles();
          update();
+         System.out.println("Player 1:"+score1+"  Player 2: "+score2+"\n");
       }
    }
    public void setupPaddles()
@@ -202,9 +203,10 @@ public class game
          System.out.println("+1 Player 1");
       }
       checkWinner();
-      if (ballX == 0 || ballX == y-1)
+      if (ballY == 1 || ballY == y-2)
       {
          // Yay recursion!
+         board[ballX][ballY] = ' ';
          setupBall();
       }
       int nx = ballX;
@@ -404,7 +406,7 @@ public class game
    {
       try
       {
-        if (main.os.contains("Windows"))
+        if (cli.os.contains("Windows"))
         {
             Runtime.getRuntime().exec("cls");
         }
