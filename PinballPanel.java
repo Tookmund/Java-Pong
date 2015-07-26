@@ -109,7 +109,7 @@
           @Override
           public void keyPressed(KeyEvent e) 
           {
-            System.out.println("Pressed " + e.getKeyChar());
+            //System.out.println("Pressed " + e.getKeyChar());
           }
       }
    }
